@@ -1,7 +1,5 @@
+import { App } from '@/components/sections/app'
+
 export default function Home() {
-  return (
-    <div className="h-screen w-screen">
-      <h1>Hello world</h1>
-    </div>
-  )
+  return <App />
 }
