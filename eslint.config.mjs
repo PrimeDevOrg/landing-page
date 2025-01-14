@@ -10,7 +10,21 @@ const compat = new FlatCompat({
 });
 
 const eslintConfig = [
-  ...compat.extends("next/core-web-vitals", "next/typescript", "@rocketseat/eslint-config/react"),
+  ...compat.extends(
+    "next/core-web-vitals",
+    "next/typescript",
+    "@rocketseat/eslint-config/react"
+  ),
+  {
+    rules: {
+      "prettier/prettier": [
+        "error",
+        {
+          endOfLine: "auto", 
+        },
+      ],
+    },
+  },
 ];
 
 export default eslintConfig;

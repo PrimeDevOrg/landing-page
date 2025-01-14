@@ -16,6 +16,7 @@ import ScrollToPlugin from 'gsap/ScrollToPlugin'
 import ScrollTrigger from 'gsap/ScrollTrigger'
 import Image from 'next/image'
 import { Services } from './services'
+import { MainContent } from './main-content'
 
 gsap.registerPlugin(useGSAP, ScrollTrigger, ScrollToPlugin, MotionPathPlugin)
 
@@ -188,6 +189,7 @@ export function App() {
       </div>
 
       <Services />
+      <MainContent />
     </div>
   )
 }
