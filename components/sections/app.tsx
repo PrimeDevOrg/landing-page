@@ -9,6 +9,7 @@ import MotionPathPlugin from 'gsap/MotionPathPlugin'
 import ScrollToPlugin from 'gsap/ScrollToPlugin'
 import ScrollTrigger from 'gsap/ScrollTrigger'
 import { Services } from './services'
+import { MainContent } from './main-content'
 
 gsap.registerPlugin(useGSAP, ScrollTrigger, ScrollToPlugin, MotionPathPlugin)
 
@@ -170,6 +171,7 @@ export function App() {
       <div className="box-server h-10 w-10 rounded-full bg-brand"></div>
 
       <Services />
+      <MainContent />
     </div>
   )
 }
