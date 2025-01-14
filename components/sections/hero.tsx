@@ -7,7 +7,7 @@ export function Hero() {
       id="home"
       className="flex h-screen flex-col items-center justify-center border-b border-slate-300 bg-white p-8"
     >
-      <div className="flex max-w-[1026px] flex-col items-center justify-center gap-3">
+      <div className="z-40 flex max-w-[1026px] flex-col items-center justify-center gap-3">
         <h1 className="max-w-[960px] text-center text-6xl font-extrabold text-slate-900">
           Criamos Soluções Digitais que{' '}
           <span className="text-brand">Transformam Negócios</span>
