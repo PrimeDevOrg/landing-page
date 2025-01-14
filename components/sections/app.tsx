@@ -25,7 +25,7 @@ export function App() {
   useGSAP(
     () => {
       const tl = gsap.timeline()
-      const end = 'bottom bottom+=70%'
+      const end = 'bottom bottom+=50%'
       tl.to('.box-zap', {
         scrollTrigger: {
           trigger: container.current,

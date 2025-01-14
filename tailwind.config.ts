@@ -58,7 +58,7 @@ export default {
         sm: 'calc(var(--radius) - 4px)',
       },
       gridTemplateColumns: {
-        auto: 'repeat(auto-fit, minmax(300px, 1fr))',
+        auto: 'repeat(auto-fit, minmax(400px, 1fr))',
         'auto-md': 'repeat(auto-fit, minmax(130px, 200px))',
         'auto-sm': 'repeat(auto-fit, minmax(80px, 100px))',
       },
