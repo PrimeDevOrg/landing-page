@@ -3,7 +3,7 @@ import { Button } from './ui/button'
 
 export function Header() {
   return (
-    <header className="fixed left-1/2 top-6 z-50 flex w-full max-w-[1026px] -translate-x-1/2 items-center justify-between gap-6 rounded-full border bg-white px-5 py-4 shadow">
+    <header className="fixed left-1/2 top-6 z-[1000] flex w-full max-w-[1026px] -translate-x-1/2 items-center justify-between gap-6 rounded-full border bg-white px-5 py-4 shadow">
       <span className="flex items-center gap-2 text-xl font-bold">
         <Crown className="text-brand" />
         PrimeDev

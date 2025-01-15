@@ -5,9 +5,16 @@ import { useRef } from 'react'
 import { Header } from '../header'
 import { Hero } from './hero'
 
+import codeIcon from '@/public/code-icon.svg'
+import gearIcon from '@/public/gear-icon.svg'
+import lightBulbIcon from '@/public/light-bulb-icon.svg'
+import networkIcon from '@/public/network-icon.svg'
+import shieldCheckIcon from '@/public/shield-check-icon.svg'
+import zapIcon from '@/public/zap-icon.svg'
 import MotionPathPlugin from 'gsap/MotionPathPlugin'
 import ScrollToPlugin from 'gsap/ScrollToPlugin'
 import ScrollTrigger from 'gsap/ScrollTrigger'
+import Image from 'next/image'
 import { Services } from './services'
 import { MainContent } from './main-content'
 
@@ -19,13 +26,13 @@ export function App() {
   useGSAP(
     () => {
       const tl = gsap.timeline()
-
+      const end = 'bottom bottom+=50%'
       tl.to('.box-zap', {
         scrollTrigger: {
           trigger: container.current,
           scrub: true,
           start: 'top top',
-          end: 'bottom bottom',
+          end,
         },
         ease: 'sine.out',
         motionPath: {
@@ -40,7 +47,7 @@ export function App() {
           trigger: container.current,
           scrub: true,
           start: 'top top',
-          end: 'bottom bottom',
+          end,
         },
         ease: 'sine.out',
         motionPath: {
@@ -54,7 +61,7 @@ export function App() {
           trigger: container.current,
           scrub: true,
           start: 'top top',
-          end: 'bottom bottom',
+          end,
         },
         ease: 'sine.out',
         motionPath: {
@@ -68,7 +75,7 @@ export function App() {
           trigger: container.current,
           scrub: true,
           start: 'top top',
-          end: 'bottom bottom',
+          end,
         },
         ease: 'sine.out',
         motionPath: {
@@ -82,7 +89,7 @@ export function App() {
           trigger: container.current,
           scrub: true,
           start: 'top top',
-          end: 'bottom bottom',
+          end,
         },
         ease: 'sine.out',
         motionPath: {
@@ -96,7 +103,7 @@ export function App() {
           trigger: container.current,
           scrub: true,
           start: 'top top',
-          end: 'bottom bottom',
+          end,
         },
         ease: 'sine.out',
         motionPath: {
@@ -109,17 +116,17 @@ export function App() {
     { scope: container },
   )
   return (
-    <div className="h-full w-full overflow-y-auto" ref={container}>
+    <div className="h-full w-full" ref={container}>
       <Header />
       <Hero />
 
       <svg
-        width="675"
+        width="30%"
         height="900"
         viewBox="0 0 675 900"
         fill="none"
         xmlns="http://www.w3.org/2000/svg"
-        className="absolute left-0 top-1/4"
+        className="absolute left-0 top-[15%]"
       >
         <path
           className="mp-zap"
@@ -139,12 +146,12 @@ export function App() {
       </svg>
 
       <svg
-        width="680"
+        width="30%"
         height="900"
         viewBox="0 0 680 900"
         fill="none"
         xmlns="http://www.w3.org/2000/svg"
-        className="absolute right-0 top-1/4"
+        className="absolute right-0 top-[15%]"
       >
         <path
           className="mp-code"
@@ -162,13 +169,24 @@ export function App() {
           stroke="#A1A1AA"
         />
       </svg>
-
-      <div className="box-zap h-10 w-10 rounded-full bg-brand"></div>
-      <div className="box-gear h-10 w-10 rounded-full bg-brand"></div>
-      <div className="box-light h-10 w-10 rounded-full bg-brand"></div>
-      <div className="box-code h-10 w-10 rounded-full bg-brand"></div>
-      <div className="box-security h-10 w-10 rounded-full bg-brand"></div>
-      <div className="box-server h-10 w-10 rounded-full bg-brand"></div>
+      <div className="box-zap absolute z-10 flex h-16 w-16 items-center justify-center rounded-full border bg-white shadow">
+        <Image width={42} src={zapIcon} alt="" />
+      </div>
+      <div className="box-gear absolute flex h-16 w-16 items-center justify-center rounded-full border bg-white shadow">
+        <Image width={42} src={gearIcon} alt="" />
+      </div>
+      <div className="box-light absolute flex h-16 w-16 items-center justify-center rounded-full border bg-white shadow">
+        <Image width={42} src={lightBulbIcon} alt="" />
+      </div>
+      <div className="box-code absolute flex h-16 w-16 items-center justify-center rounded-full border bg-white shadow">
+        <Image width={42} src={codeIcon} alt="" />
+      </div>
+      <div className="box-security absolute flex h-16 w-16 items-center justify-center rounded-full border bg-white shadow">
+        <Image width={42} src={shieldCheckIcon} alt="" />
+      </div>
+      <div className="box-server absolute flex h-16 w-16 items-center justify-center rounded-full border bg-white shadow">
+        <Image width={42} src={networkIcon} alt="" />
+      </div>
 
       <Services />
       <MainContent />
