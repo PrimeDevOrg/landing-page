@@ -1,17 +1,17 @@
-import { services } from '@/data/services'
-import Image from 'next/image'
+import { services } from "@/data/services";
+import Image from "next/image";
 import {
   Card,
   CardContent,
   CardDescription,
   CardHeader,
   CardTitle,
-} from '../ui/card'
+} from "../ui/card";
 
 export function Services() {
   return (
     <section className="relative min-h-screen">
-      <div className="absolute inset-0 z-50 justify-center bg-slate-50">
+      <div className="z-50 justify-center bg-slate-50">
         <div className="flex h-full w-full flex-col items-center">
           <div className="grid max-w-[1026px] grid-cols-auto justify-center gap-4 p-8">
             {services.map(
@@ -36,12 +36,12 @@ export function Services() {
                       <p className="text-zinc-900">{subDescription}</p>
                     </CardContent>
                   </Card>
-                )
+                );
               },
             )}
           </div>
         </div>
       </div>
     </section>
-  )
+  );
 }
