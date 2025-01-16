@@ -1,9 +1,9 @@
-'use client'
-import { useGSAP } from '@gsap/react'
-import gsap from 'gsap'
-import { useRef } from 'react'
-import { Header } from '../header'
-import { Hero } from './hero'
+'use client';
+import { useGSAP } from '@gsap/react';
+import gsap from 'gsap';
+import { useRef } from 'react';
+import { Header } from '../header';
+import { Hero } from './hero';
 
 import codeIcon from '@/public/code-icon.svg'
 import gearIcon from '@/public/gear-icon.svg'
@@ -20,15 +20,15 @@ import { MainContent } from './main-content'
 import { Testimonials } from './testimonials'
 import { Contact } from './contact'
 
-gsap.registerPlugin(useGSAP, ScrollTrigger, ScrollToPlugin, MotionPathPlugin)
+gsap.registerPlugin(useGSAP, ScrollTrigger, ScrollToPlugin, MotionPathPlugin);
 
 export function App() {
-  const container = useRef<HTMLDivElement | null>(null)
+  const container = useRef<HTMLDivElement | null>(null);
 
   useGSAP(
     () => {
-      const tl = gsap.timeline()
-      const end = 'bottom bottom+=50%'
+      const tl = gsap.timeline();
+      const end = 'bottom bottom+=50vh';
       tl.to('.box-zap', {
         scrollTrigger: {
           trigger: container.current,
@@ -42,7 +42,7 @@ export function App() {
           align: '.mp-zap',
           alignOrigin: [0.5, 0.5],
         },
-      })
+      });
 
       tl.to('.box-gear', {
         scrollTrigger: {
@@ -57,7 +57,7 @@ export function App() {
           align: '.mp-gear',
           alignOrigin: [0.5, 0.5],
         },
-      })
+      });
       tl.to('.box-light', {
         scrollTrigger: {
           trigger: container.current,
@@ -71,7 +71,7 @@ export function App() {
           align: '.mp-light',
           alignOrigin: [0.5, 0.5],
         },
-      })
+      });
       tl.to('.box-code', {
         scrollTrigger: {
           trigger: container.current,
@@ -85,7 +85,7 @@ export function App() {
           align: '.mp-code',
           alignOrigin: [0.5, 0.5],
         },
-      })
+      });
       tl.to('.box-security', {
         scrollTrigger: {
           trigger: container.current,
@@ -99,7 +99,7 @@ export function App() {
           align: '.mp-security',
           alignOrigin: [0.5, 0.5],
         },
-      })
+      });
       tl.to('.box-server', {
         scrollTrigger: {
           trigger: container.current,
@@ -113,10 +113,10 @@ export function App() {
           align: '.mp-server',
           alignOrigin: [0.5, 0.5],
         },
-      })
+      });
     },
     { scope: container },
-  )
+  );
   return (
     <div className="h-full w-full" ref={container}>
       <Header />
@@ -195,5 +195,5 @@ export function App() {
       <Testimonials />
       <Contact />
     </div>
-  )
+  );
 }
