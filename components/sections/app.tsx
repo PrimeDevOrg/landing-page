@@ -5,18 +5,20 @@ import { useRef } from 'react';
 import { Header } from '../header';
 import { Hero } from './hero';
 
-import codeIcon from '@/public/code-icon.svg';
-import gearIcon from '@/public/gear-icon.svg';
-import lightBulbIcon from '@/public/light-bulb-icon.svg';
-import networkIcon from '@/public/network-icon.svg';
-import shieldCheckIcon from '@/public/shield-check-icon.svg';
-import zapIcon from '@/public/zap-icon.svg';
-import MotionPathPlugin from 'gsap/MotionPathPlugin';
-import ScrollToPlugin from 'gsap/ScrollToPlugin';
-import ScrollTrigger from 'gsap/ScrollTrigger';
-import Image from 'next/image';
-import { MainContent } from './main-content';
-import { Services } from './services';
+import codeIcon from '@/public/code-icon.svg'
+import gearIcon from '@/public/gear-icon.svg'
+import lightBulbIcon from '@/public/light-bulb-icon.svg'
+import networkIcon from '@/public/network-icon.svg'
+import shieldCheckIcon from '@/public/shield-check-icon.svg'
+import zapIcon from '@/public/zap-icon.svg'
+import MotionPathPlugin from 'gsap/MotionPathPlugin'
+import ScrollToPlugin from 'gsap/ScrollToPlugin'
+import ScrollTrigger from 'gsap/ScrollTrigger'
+import Image from 'next/image'
+import { Services } from './services'
+import { MainContent } from './main-content'
+import { Testimonials } from './testimonials'
+import { Contact } from './contact'
 
 gsap.registerPlugin(useGSAP, ScrollTrigger, ScrollToPlugin, MotionPathPlugin);
 
@@ -190,6 +192,8 @@ export function App() {
 
       <Services />
       <MainContent />
+      <Testimonials />
+      <Contact />
     </div>
   );
 }
