@@ -13,7 +13,7 @@ export function Header() {
   return (
     <div className="fixed left-1/2 z-[1000] w-full max-w-[1026px] -translate-x-1/2 md:top-4 lg:top-6">
       <header className="hidden w-full items-center justify-between gap-4 rounded-full border bg-white px-5 py-4 shadow lg:flex">
-        <Image src={Logo} alt="PrimeDev" />
+        <Image src={Logo} alt="PrimeDev" width={140} />
 
         <nav className="flex gap-4 text-slate-700">
           <a href="#services">Serviços</a>
