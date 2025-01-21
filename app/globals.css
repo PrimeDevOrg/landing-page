@@ -9,8 +9,10 @@
   }
 }
 
-body {
+body, html {
   /* font-family: Inter; */
+  scroll-behavior: smooth;
+  scroll-margin-top: 60px;
 }
 
 @layer base {

@@ -1,6 +1,7 @@
 'use client';
 import { Button } from '../ui/button';
 
+import blurGreen from '@/public/blur-green.svg';
 import codeIcon from '@/public/code-icon.svg';
 import gearIcon from '@/public/gear-icon.svg';
 import lightBulbIcon from '@/public/light-bulb-icon.svg';
@@ -115,10 +116,16 @@ export function Hero() {
   return (
     <section
       id="home"
-      className="relative flex h-screen flex-col items-center justify-center border-b border-slate-300 bg-white p-8"
+      className="relative flex h-screen flex-col items-center justify-center border-b border-slate-300 bg-white"
       ref={container}
     >
-      <div className="z-40 flex max-w-[1026px] flex-col items-center justify-center gap-3">
+      <Image src={blurGreen} className="absolute -left-1/2 -top-1/2" alt="" />
+      <Image
+        src={blurGreen}
+        className="absolute -bottom-1/2 -right-1/2"
+        alt=""
+      />
+      <div className="z-40 flex max-w-[1026px] flex-col items-center justify-center gap-3 p-8">
         <h1 className="max-w-[960px] text-center text-3xl font-extrabold text-slate-900 md:text-4xl lg:text-6xl">
           Criamos Soluções Digitais que{' '}
           <span className="text-brand">Transformam Negócios</span>
@@ -134,14 +141,14 @@ export function Hero() {
         <Button size="lg">Entrar em contato</Button>
       </div>
 
-      <div className="absolute inset-0 flex items-baseline justify-between">
+      <div className="absolute inset-0 flex items-end justify-between">
         <svg
           width="675"
           height="900"
           viewBox="0 0 675 900"
           fill="none"
           xmlns="http://www.w3.org/2000/svg"
-          className="w-[240px] md:w-[350px]"
+          className="-mb-4 h-min w-[240px] md:w-[350px]"
         >
           <path
             className="mp-zap"
@@ -166,7 +173,7 @@ export function Hero() {
           viewBox="0 0 675 900"
           fill="none"
           xmlns="http://www.w3.org/2000/svg"
-          className="w-[240px] md:w-[350px]"
+          className="-mb-4 h-min w-[240px] md:w-[350px]"
         >
           <path
             className="mp-code"
@@ -184,22 +191,22 @@ export function Hero() {
             stroke="#A1A1AA"
           />
         </svg>
-        <div className="box-zap absolute flex h-16 w-16 items-center justify-center rounded-full border bg-white shadow">
+        <div className="box-zap absolute flex h-10 w-10 items-center justify-center rounded-full border bg-white shadow md:h-16 md:w-16">
           <Image width={42} src={zapIcon} alt="" />
         </div>
-        <div className="box-gear absolute flex h-16 w-16 items-center justify-center rounded-full border bg-white shadow">
+        <div className="box-gear absolute flex h-16 w-16 items-center justify-center rounded-full border bg-white shadow md:h-16 md:w-16">
           <Image width={42} src={gearIcon} alt="" />
         </div>
-        <div className="box-light absolute flex h-16 w-16 items-center justify-center rounded-full border bg-white shadow">
+        <div className="box-light absolute flex h-16 w-16 items-center justify-center rounded-full border bg-white shadow md:h-16 md:w-16">
           <Image width={42} src={lightBulbIcon} alt="" />
         </div>
-        <div className="box-code absolute flex h-16 w-16 items-center justify-center rounded-full border bg-white shadow">
+        <div className="box-code absolute flex h-16 w-16 items-center justify-center rounded-full border bg-white shadow md:h-16 md:w-16">
           <Image width={42} src={codeIcon} alt="" />
         </div>
-        <div className="box-security absolute flex h-16 w-16 items-center justify-center rounded-full border bg-white shadow">
+        <div className="box-security absolute flex h-16 w-16 items-center justify-center rounded-full border bg-white shadow md:h-16 md:w-16">
           <Image width={42} src={shieldCheckIcon} alt="" />
         </div>
-        <div className="box-server absolute flex h-16 w-16 items-center justify-center rounded-full border bg-white shadow">
+        <div className="box-server absolute flex h-16 w-16 items-center justify-center rounded-full border bg-white shadow md:h-16 md:w-16">
           <Image width={42} src={networkIcon} alt="" />
         </div>
       </div>
