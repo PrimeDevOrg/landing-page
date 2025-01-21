@@ -3,6 +3,7 @@ import { Header } from '../header';
 import { Hero } from './hero';
 
 import { Contact } from './contact';
+import { FrequentlyQuestions } from './frequently-questions';
 import { MainContent } from './main-content';
 import { Services } from './services';
 import { Testimonials } from './testimonials';
@@ -16,6 +17,7 @@ export function App() {
       <Services />
       <MainContent />
       <Testimonials />
+      <FrequentlyQuestions />
       <Contact />
     </div>
   );

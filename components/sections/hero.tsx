@@ -1,6 +1,7 @@
 'use client';
 import { Button } from '../ui/button';
 
+import blurGreen from '@/public/blur-green.svg';
 import codeIcon from '@/public/code-icon.svg';
 import gearIcon from '@/public/gear-icon.svg';
 import lightBulbIcon from '@/public/light-bulb-icon.svg';
@@ -118,6 +119,12 @@ export function Hero() {
       className="relative flex h-screen flex-col items-center justify-center border-b border-slate-300 bg-white"
       ref={container}
     >
+      <Image src={blurGreen} className="absolute -left-1/2 -top-1/2" alt="" />
+      <Image
+        src={blurGreen}
+        className="absolute -bottom-1/2 -right-1/2"
+        alt=""
+      />
       <div className="z-40 flex max-w-[1026px] flex-col items-center justify-center gap-3 p-8">
         <h1 className="max-w-[960px] text-center text-3xl font-extrabold text-slate-900 md:text-4xl lg:text-6xl">
           Criamos Soluções Digitais que{' '}

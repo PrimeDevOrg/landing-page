@@ -19,6 +19,7 @@ export function Header() {
           <a href="#services">Serviços</a>
           <a href="#about">Sobre nos</a>
           <a href="#testimonials">Depoimentos</a>
+          <a href="#faq">FAQ</a>
           <a href="#contact">Contato</a>
         </nav>
 
