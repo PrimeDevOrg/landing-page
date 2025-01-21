@@ -10,7 +10,7 @@ import {
 
 export function Services() {
   return (
-    <section className="relative min-h-screen">
+    <section id="services" className="relative min-h-screen">
       <div className="z-50 justify-center bg-slate-50">
         <div className="flex h-full w-full flex-col items-center">
           <div className="grid max-w-[1026px] justify-center gap-4 p-8 sm:grid-cols-auto-sm md:grid-cols-auto-md lg:grid-cols-auto">

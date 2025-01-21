@@ -1,29 +1,30 @@
+import { zodResolver } from '@hookform/resolvers/zod';
 import { Send } from 'lucide-react';
-import { useRef } from 'react';
+import { useForm } from 'react-hook-form';
+import { z } from 'zod';
 import { Button } from '../ui/button';
 
+const contactSchema = z.object({
+  name: z.string().min(3, 'O nome deve ter pelo menos 3 caracteres'),
+  mail: z.string().email('Digite um email válido'),
+  message: z.string().min(10, 'A mensagem deve ter pelo menos 10 caracteres'),
+});
+
+type ContactFormData = z.infer<typeof contactSchema>;
+
 export function Contact() {
-  // Referências para os campos do formulário
-  const nameRef = useRef<HTMLInputElement>(null);
-  const mailRef = useRef<HTMLInputElement>(null);
-  const messageRef = useRef<HTMLTextAreaElement>(null);
+  const {
+    register,
+    handleSubmit,
+    reset,
+    formState: { errors },
+  } = useForm<ContactFormData>({
+    resolver: zodResolver(contactSchema),
+  });
 
-  // Função de envio
-  const handleSendMessage = (e: React.FormEvent) => {
-    e.preventDefault(); // Impede o comportamento padrão (recarregar a página)
-
-    // Acessa os valores diretamente pelos refs
-    const name = nameRef.current?.value;
-    const mail = mailRef.current?.value;
-    const message = messageRef.current?.value;
-
-    // Lógica de envio aqui (ex: enviar para uma API)
-    console.log('Dados enviados:', { name, mail, message });
-
-    // Limpa os campos após envio
-    if (nameRef.current) nameRef.current.value = '';
-    if (mailRef.current) mailRef.current.value = '';
-    if (messageRef.current) messageRef.current.value = '';
+  const handleSendMessage = (data: ContactFormData) => {
+    console.log('Dados enviados:', data);
+    reset();
   };
 
   return (
@@ -37,7 +38,7 @@ export function Contact() {
       </h1>
       <div className="m-auto mt-6 flex w-full max-w-[660px] rounded-md border bg-white p-6 shadow-md">
         <form
-          onSubmit={handleSendMessage}
+          onSubmit={handleSubmit(handleSendMessage)}
           className="flex w-full flex-col gap-4"
         >
           <div className="flex flex-col gap-2">
@@ -46,12 +47,14 @@ export function Contact() {
             </label>
             <input
               type="text"
-              name="name"
               id="name"
-              ref={nameRef}
+              {...register('name')}
               className="h-12 rounded-md border p-4 italic"
               placeholder="Digite seu nome ou nome da sua empresa"
             />
+            {errors.name && (
+              <span className="text-red-500">{errors.name.message}</span>
+            )}
           </div>
           <div className="flex flex-col gap-2">
             <label htmlFor="mail" className="text-slate-700">
@@ -59,24 +62,28 @@ export function Contact() {
             </label>
             <input
               type="email"
-              name="mail"
               id="mail"
-              ref={mailRef}
+              {...register('mail')}
               className="h-12 rounded-md border p-4 italic"
               placeholder="Digite seu email para contato"
             />
+            {errors.mail && (
+              <span className="text-red-500">{errors.mail.message}</span>
+            )}
           </div>
           <div className="flex flex-col gap-2">
             <label htmlFor="message" className="text-slate-700">
               Mensagem:{' '}
             </label>
             <textarea
-              name="message"
               id="message"
-              ref={messageRef}
+              {...register('message')}
               className="h-[153px] resize-none rounded-md border p-4 italic"
               placeholder="Digite sua mensagem"
             />
+            {errors.message && (
+              <span className="text-red-500">{errors.message.message}</span>
+            )}
           </div>
           <Button
             className="h-14 w-full rounded-3xl text-xl"

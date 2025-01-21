@@ -3,6 +3,7 @@ import { Header } from '../header';
 import { Hero } from './hero';
 
 import { Contact } from './contact';
+import { Footer } from './footer';
 import { MainContent } from './main-content';
 import { Services } from './services';
 import { Testimonials } from './testimonials';
@@ -17,6 +18,7 @@ export function App() {
       <MainContent />
       <Testimonials />
       <Contact />
+      <Footer />
     </div>
   );
 }

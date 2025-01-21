@@ -1,16 +1,16 @@
-"use client";
+'use client';
 
-import React from "react";
+import React from 'react';
 
 interface AboutCardProps {
   children: React.ReactNode;
-  className?: string; 
+  className?: string;
 }
 
-export function AboutCard({ children, className = "" }: AboutCardProps) {
+export function AboutCard({ children, className = '' }: AboutCardProps) {
   return (
     <div
-    className={`flex flex-col gap-2 p-6 border border-[#ea5a0c34] rounded-lg shadow-sm bg-gradient-to-r from-white 50% to-[#fc762e1f] text-2xl text-brand font-bold ${className}`}
+      className={`50% flex flex-col gap-2 rounded-lg border border-[#ea5a0c34] bg-gradient-to-r from-white to-[#fc762e1f] p-6 text-2xl font-bold text-brand shadow-sm ${className}`}
     >
       {children}
     </div>
