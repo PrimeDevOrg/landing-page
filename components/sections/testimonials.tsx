@@ -25,7 +25,7 @@ export function Testimonials() {
             />
           </svg>
           <h3 className="text-xl font-bold">Ana Silva</h3>
-          <span>Gerente de Marketing, Loja Virtual Conecta</span>
+          {/* <span>Gerente de Marketing, Loja Virtual Conecta</span> */}
           <p className="pt-2 font-medium italic">
             "Escolher a PrimeDev para desenvolver nosso site foi uma das
             melhores decisões que tomamos. Eles entenderam exatamente nossas
@@ -51,7 +51,7 @@ export function Testimonials() {
             />
           </svg>
           <h3 className="text-xl font-bold">Carlos Mendes</h3>
-          <span>CEO, FitApp</span>
+          {/* <span>CEO, FitApp</span> */}
           <p className="pt-2 font-medium italic">
             "O aplicativo desenvolvido pela PrimeDev superou todas as nossas
             expectativas. Eles criaram uma solução intuitiva e funcional que

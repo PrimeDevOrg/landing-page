@@ -138,7 +138,14 @@ export function Hero() {
           e desempenho incomparável. Transforme suas ideias em realidade com{' '}
           <strong className="text-brand">tecnologia de ponta.</strong>
         </p>
-        <Button size="lg">Entrar em contato</Button>
+
+        <a
+          href="https://wa.me/+5562994826949?text=Ol%C3%A1%2C+estou+interessado+em+um+dos+servi%C3%A7os+da+PrimeDev%2C+pode+me+falar+mais+sobre+isso%3F"
+          target="_blank"
+          rel="noreferrer"
+        >
+          <Button size="lg">Entrar em contato</Button>
+        </a>
       </div>
 
       <div className="absolute inset-0 flex items-end justify-between gap-4">
@@ -148,7 +155,7 @@ export function Hero() {
           viewBox="0 0 675 900"
           fill="none"
           xmlns="http://www.w3.org/2000/svg"
-          className="-mb-4 h-min w-[240px] md:w-[350px]"
+          className="-mb-10 h-min w-[240px] md:w-[350px]"
         >
           <path
             className="mp-zap"
@@ -173,7 +180,7 @@ export function Hero() {
           viewBox="0 0 675 900"
           fill="none"
           xmlns="http://www.w3.org/2000/svg"
-          className="-mb-4 h-min w-[240px] md:w-[350px]"
+          className="-mb-10 h-min w-[240px] md:w-[350px]"
         >
           <path
             className="mp-code"
