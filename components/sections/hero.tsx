@@ -1,7 +1,7 @@
 'use client';
 import { Button } from '../ui/button';
 
-import blurGreen from '@/public/blur-green.svg';
+import blurSlate from '@/public/blur-slate.svg';
 import codeIcon from '@/public/code-icon.svg';
 import gearIcon from '@/public/gear-icon.svg';
 import lightBulbIcon from '@/public/light-bulb-icon.svg';
@@ -116,12 +116,12 @@ export function Hero() {
   return (
     <section
       id="home"
-      className="relative flex h-screen flex-col items-center justify-center border-b border-slate-300 bg-white"
+      className="relative flex h-screen flex-col items-center justify-center overflow-hidden border-b border-slate-300 bg-white"
       ref={container}
     >
-      <Image src={blurGreen} className="absolute -left-1/2 -top-1/2" alt="" />
+      <Image src={blurSlate} className="absolute -left-1/2 -top-1/2" alt="" />
       <Image
-        src={blurGreen}
+        src={blurSlate}
         className="absolute -bottom-1/2 -right-1/2"
         alt=""
       />
@@ -141,7 +141,7 @@ export function Hero() {
         <Button size="lg">Entrar em contato</Button>
       </div>
 
-      <div className="absolute inset-0 flex items-end justify-between">
+      <div className="absolute inset-0 flex items-end justify-between gap-4">
         <svg
           width="675"
           height="900"
@@ -191,22 +191,22 @@ export function Hero() {
             stroke="#A1A1AA"
           />
         </svg>
-        <div className="box-zap absolute flex h-10 w-10 items-center justify-center rounded-full border bg-white shadow md:h-16 md:w-16">
+        <div className="box-zap absolute flex h-16 w-16 scale-50 items-center justify-center rounded-full border bg-white shadow md:scale-100">
           <Image width={42} src={zapIcon} alt="" />
         </div>
-        <div className="box-gear absolute flex h-16 w-16 items-center justify-center rounded-full border bg-white shadow md:h-16 md:w-16">
+        <div className="box-gear absolute flex h-16 w-16 scale-50 items-center justify-center rounded-full border bg-white shadow md:scale-100">
           <Image width={42} src={gearIcon} alt="" />
         </div>
-        <div className="box-light absolute flex h-16 w-16 items-center justify-center rounded-full border bg-white shadow md:h-16 md:w-16">
+        <div className="box-light absolute flex h-16 w-16 scale-50 items-center justify-center rounded-full border bg-white shadow md:scale-100">
           <Image width={42} src={lightBulbIcon} alt="" />
         </div>
-        <div className="box-code absolute flex h-16 w-16 items-center justify-center rounded-full border bg-white shadow md:h-16 md:w-16">
+        <div className="box-code absolute flex h-16 w-16 scale-50 items-center justify-center rounded-full border bg-white shadow md:scale-100">
           <Image width={42} src={codeIcon} alt="" />
         </div>
-        <div className="box-security absolute flex h-16 w-16 items-center justify-center rounded-full border bg-white shadow md:h-16 md:w-16">
+        <div className="box-security absolute flex h-16 w-16 scale-50 items-center justify-center rounded-full border bg-white shadow md:scale-100">
           <Image width={42} src={shieldCheckIcon} alt="" />
         </div>
-        <div className="box-server absolute flex h-16 w-16 items-center justify-center rounded-full border bg-white shadow md:h-16 md:w-16">
+        <div className="box-server absolute flex h-16 w-16 scale-50 items-center justify-center rounded-full border bg-white shadow md:scale-100">
           <Image width={42} src={networkIcon} alt="" />
         </div>
       </div>
