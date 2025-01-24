@@ -2,7 +2,6 @@
 import { Header } from '../header';
 import { Hero } from './hero';
 
-import { Contact } from './contact';
 import { Footer } from './footer';
 import { FrequentlyQuestions } from './frequently-questions';
 import { MainContent } from './main-content';
@@ -19,7 +18,7 @@ export function App() {
       <MainContent />
       <Testimonials />
       <FrequentlyQuestions />
-      <Contact />
+      {/* <Contact /> */}
       <Footer />
     </div>
   );

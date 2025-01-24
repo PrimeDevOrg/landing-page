@@ -20,7 +20,7 @@ export function Header() {
           <a href="#about">Sobre nos</a>
           <a href="#testimonials">Depoimentos</a>
           <a href="#faq">FAQ</a>
-          <a href="#contact">Contato</a>
+          {/* <a href="#contact">Contato</a> */}
         </nav>
 
         <Button>Solicitar orçamento</Button>
@@ -36,10 +36,19 @@ export function Header() {
               </Button>
             </DropdownMenuTrigger>
             <DropdownMenuContent>
-              <DropdownMenuItem>Serviços</DropdownMenuItem>
-              <DropdownMenuItem>Sobre nos</DropdownMenuItem>
-              <DropdownMenuItem>Depoimentos</DropdownMenuItem>
-              <DropdownMenuItem>Contato</DropdownMenuItem>
+              <DropdownMenuItem>
+                <a href="#services">Serviços</a>
+              </DropdownMenuItem>
+              <DropdownMenuItem>
+                <a href="#about">Sobre nos</a>
+              </DropdownMenuItem>
+              <DropdownMenuItem>
+                <a href="#testimonials">Depoimentos</a>
+              </DropdownMenuItem>
+              <DropdownMenuItem>
+                <a href="#faq">FAQ</a>
+              </DropdownMenuItem>
+              {/* <DropdownMenuItem>Contato</DropdownMenuItem> */}
             </DropdownMenuContent>
           </DropdownMenu>
           <div className="flex items-center justify-center rounded-full border border-zinc-200 bg-white px-2 py-1">
