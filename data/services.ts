@@ -1,4 +1,7 @@
-import websiteIcon from '@/public/website-icon.svg'
+import apiIcon from '@/public/api-icon.svg';
+import appIcon from '@/public/app-icon.svg';
+import suportIcon from '@/public/suport-icon.svg';
+import websiteIcon from '@/public/website-icon.svg';
 
 export const services = [
   {
@@ -13,7 +16,7 @@ export const services = [
   },
   {
     id: 1,
-    icon: websiteIcon,
+    icon: appIcon,
     title: 'Aplicativos',
     description:
       'Transformamos suas ideias em aplicativos móveis de alta performance, compatíveis com Android e iOS. Com interfaces intuitivas e funcionalidades robustas, criamos apps que encantam os usuários e impulsionam negócios.',
@@ -23,7 +26,7 @@ export const services = [
   },
   {
     id: 2,
-    icon: websiteIcon,
+    icon: apiIcon,
     title: 'APIs e Integrações Personalizadas',
     description:
       'Desenvolvemos APIs seguras e escaláveis para conectar sistemas, automatizar processos e expandir as possibilidades do seu negócio. Nossas integrações garantem eficiência e comunicação perfeita entre plataformas.',
@@ -33,7 +36,7 @@ export const services = [
   },
   {
     id: 3,
-    icon: websiteIcon,
+    icon: suportIcon,
     title: 'Manutenção e Suporte Técnico',
     description:
       'Garantimos que suas soluções digitais permaneçam atualizadas, seguras e funcionando com desempenho máximo. Oferecemos suporte contínuo e manutenção preventiva.',
@@ -41,4 +44,4 @@ export const services = [
     subDescription:
       'Empresas que já possuem sistemas e desejam suporte especializado.',
   },
-]
+];

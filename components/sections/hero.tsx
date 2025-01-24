@@ -1,7 +1,6 @@
 'use client';
 import { Button } from '../ui/button';
 
-import blurSlate from '@/public/blur-slate.svg';
 import codeIcon from '@/public/code-icon.svg';
 import gearIcon from '@/public/gear-icon.svg';
 import lightBulbIcon from '@/public/light-bulb-icon.svg';
@@ -13,9 +12,11 @@ import ScrollToPlugin from 'gsap/ScrollToPlugin';
 import ScrollTrigger from 'gsap/ScrollTrigger';
 import Image from 'next/image';
 
+import blurSlate from '@/public/blur-slate.svg';
 import { useGSAP } from '@gsap/react';
 import gsap from 'gsap';
 import { useRef } from 'react';
+import { TextGenerateEffect } from '../ui/text-generate-effect';
 gsap.registerPlugin(useGSAP, ScrollTrigger, ScrollToPlugin, MotionPathPlugin);
 
 export function Hero() {
@@ -119,6 +120,7 @@ export function Hero() {
       className="relative flex h-screen flex-col items-center justify-center overflow-hidden border-b border-slate-300 bg-white"
       ref={container}
     >
+      {/* <Spotlight /> */}
       <Image src={blurSlate} className="absolute -left-1/2 -top-1/2" alt="" />
       <Image
         src={blurSlate}
@@ -126,9 +128,15 @@ export function Hero() {
         alt=""
       />
       <div className="z-40 flex max-w-[1026px] flex-col items-center justify-center gap-3 p-8">
-        <h1 className="max-w-[960px] text-center text-3xl font-extrabold text-slate-900 md:text-4xl lg:text-6xl">
-          Criamos Soluções Digitais que{' '}
-          <span className="text-brand">Transformam Negócios</span>
+        <h1 className="max-w-[960px] text-center">
+          <TextGenerateEffect
+            words="Criamos Soluções Digitais que"
+            className="text-slate-900"
+          />
+          <TextGenerateEffect
+            words="Transformam Negócios"
+            className="text-brand"
+          />
         </h1>
         <p className="text-center text-xl font-medium md:text-2xl lg:text-4xl">
           Na PrimeDev, desenvolvemos websites, apps móveis e APIs com{' '}

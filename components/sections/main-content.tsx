@@ -1,8 +1,8 @@
 'use client';
 
 import { Check } from 'lucide-react';
+import { AboutCard } from '../AboutCard';
 import { CallBanner } from '../action-banner';
-import { AboutCard } from '../ui/AboutCard';
 
 export function MainContent() {
   return (
