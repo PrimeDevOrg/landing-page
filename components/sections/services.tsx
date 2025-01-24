@@ -1,12 +1,6 @@
 import { services } from '@/data/services';
 import Image from 'next/image';
-import {
-  Card,
-  CardContent,
-  CardDescription,
-  CardHeader,
-  CardTitle,
-} from '../ui/card';
+import { CardBody, CardContainer, CardItem } from '../ui/3d-card';
 
 export function Services() {
   return (
@@ -17,25 +11,46 @@ export function Services() {
             {services.map(
               ({ id, icon, title, description, label, subDescription }) => {
                 return (
-                  <Card key={id}>
-                    <CardHeader>
-                      <span className="flex h-[54px] w-[54px] items-center justify-center rounded-full bg-slate-100">
+                  <CardContainer key={id} className="h-full">
+                    <CardBody className="flex h-full w-full flex-1 flex-col items-start gap-2 rounded-2xl bg-white p-6 shadow">
+                      <CardItem
+                        className="flex h-[54px] w-[54px] items-center justify-center rounded-full bg-slate-100"
+                        as="span"
+                        translateZ="60"
+                      >
                         <Image src={icon} alt="website" width={38} />
-                      </span>
-                      <CardTitle className="text-3xl font-extrabold text-slate-800">
+                      </CardItem>
+
+                      <CardItem
+                        className="text-3xl font-extrabold text-slate-800"
+                        as="strong"
+                        translateZ="40"
+                      >
                         {title}
-                      </CardTitle>
-                    </CardHeader>
-                    <CardContent className="space-y-4">
-                      <CardDescription className="mb-4 text-lg text-zinc-700">
+                      </CardItem>
+                      <CardItem
+                        as="p"
+                        className="mb-4 text-lg text-zinc-700"
+                        translateZ="65"
+                      >
                         {description}
-                      </CardDescription>
-                      <span className="mt-4 text-sm uppercase text-brand">
+                      </CardItem>
+                      <CardItem
+                        as="span"
+                        className="mt-4 text-sm uppercase text-brand"
+                        translateZ="50"
+                      >
                         {label}
-                      </span>
-                      <p className="text-zinc-900">{subDescription}</p>
-                    </CardContent>
-                  </Card>
+                      </CardItem>
+                      <CardItem
+                        as="p"
+                        translateZ="50"
+                        className="text-zinc-9000"
+                      >
+                        {subDescription}
+                      </CardItem>
+                    </CardBody>
+                  </CardContainer>
                 );
               },
             )}
