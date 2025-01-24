@@ -1,6 +1,6 @@
 import apiIcon from '@/public/api-icon.svg';
 import appIcon from '@/public/app-icon.svg';
-import suportIcon from '@/public/suport-icon.svg';
+import supportIcon from '@/public/support-icon.svg';
 import websiteIcon from '@/public/website-icon.svg';
 
 export const services = [
@@ -36,7 +36,7 @@ export const services = [
   },
   {
     id: 3,
-    icon: suportIcon,
+    icon: supportIcon,
     title: 'Manutenção e Suporte Técnico',
     description:
       'Garantimos que suas soluções digitais permaneçam atualizadas, seguras e funcionando com desempenho máximo. Oferecemos suporte contínuo e manutenção preventiva.',
