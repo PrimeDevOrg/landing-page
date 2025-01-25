@@ -148,7 +148,7 @@ export function Hero() {
         </p>
 
         <a
-          href="https://wa.me/+5562994826949?text=Ol%C3%A1%2C+estou+interessado+em+um+dos+servi%C3%A7os+da+PrimeDev%2C+pode+me+falar+mais+sobre+isso%3F"
+          href="https://wa.me/+5562982559125?text=Ol%C3%A1%2C+estou+interessado+em+um+dos+servi%C3%A7os+da+PrimeDev%2C+pode+me+falar+mais+sobre+isso%3F"
           target="_blank"
           rel="noreferrer"
         >
@@ -163,7 +163,7 @@ export function Hero() {
           viewBox="0 0 675 900"
           fill="none"
           xmlns="http://www.w3.org/2000/svg"
-          className="-mb-10 h-min w-[240px] md:w-[350px]"
+          className="-mb-10 h-[280px] w-[160px] md:h-min md:w-[350px]"
         >
           <path
             className="mp-zap"
@@ -188,7 +188,7 @@ export function Hero() {
           viewBox="0 0 675 900"
           fill="none"
           xmlns="http://www.w3.org/2000/svg"
-          className="-mb-10 h-min w-[240px] md:w-[350px]"
+          className="-mb-10 h-[280px] w-[160px] md:h-min md:w-[350px]"
         >
           <path
             className="mp-code"

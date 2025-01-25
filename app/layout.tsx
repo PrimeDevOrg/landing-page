@@ -1,3 +1,4 @@
+import icon from '@/public/icon.jpg';
 import type { Metadata } from 'next';
 import { Inter } from 'next/font/google';
 import './globals.css';
@@ -11,6 +12,7 @@ const interSans = Inter({
 export const metadata: Metadata = {
   title: 'PrimeDev',
   description: '',
+  icons: [{ url: icon.src, rel: 'icon' }],
 };
 
 export default function RootLayout({
