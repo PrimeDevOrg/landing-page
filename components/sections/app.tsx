@@ -25,7 +25,7 @@ export function App() {
       <Footer />
 
       <a
-        href="https://wa.me/+5562994826949?text=Ol%C3%A1%2C+estou+interessado+em+um+dos+servi%C3%A7os+da+PrimeDev%2C+pode+me+falar+mais+sobre+isso%3F"
+        href="https://wa.me/+5562982559125?text=Ol%C3%A1%2C+estou+interessado+em+um+dos+servi%C3%A7os+da+PrimeDev%2C+pode+me+falar+mais+sobre+isso%3F"
         target="_blank"
         rel="noreferrer"
       >
