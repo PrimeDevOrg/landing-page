@@ -32,7 +32,7 @@ export function Contact() {
       id="contact"
       className="m-auto my-8 flex max-w-[1026px] flex-col p-5 px-8"
     >
-      <h3 className="text-lg uppercase text-brand">CONTATO</h3>
+      <h3 className="text-lg text-brand">CONTATO</h3>
       <h1 className="text-4xl font-bold text-slate-800">
         Entre em contato com nossa equipe e solicite um orçamento
       </h1>
