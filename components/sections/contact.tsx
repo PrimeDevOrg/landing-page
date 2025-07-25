@@ -91,7 +91,6 @@ export function Contact() {
           className="flex w-full flex-col gap-4"
         >
           <div className="grid grid-cols-1 gap-4 md:grid-cols-2">
-            {/* Nome */}
             <div className="flex flex-col gap-2">
               <label htmlFor="name" className="text-slate-700">
                 Nome <span className="text-red-500">*</span>
@@ -108,7 +107,6 @@ export function Contact() {
               )}
             </div>
 
-            {/* Email */}
             <div className="flex flex-col gap-2">
               <label htmlFor="mail" className="text-slate-700">
                 Email <span className="text-red-500">*</span>
