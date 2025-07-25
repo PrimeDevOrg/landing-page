@@ -1,19 +1,20 @@
-'use client';
-import { Header } from '../header';
-import { Hero } from './hero';
+'use client'
+import { Header } from '../header'
+import { Hero } from './hero'
 
-import whatsappIcon from '@/public/whatsapp-icon.svg';
-import Image from 'next/image';
-import { Button } from '../ui/button';
-import { Footer } from './footer';
-import { FrequentlyQuestions } from './frequently-questions';
-import { MainContent } from './main-content';
-import { Services } from './services';
-import { Testimonials } from './testimonials';
+import whatsappIcon from '@/public/whatsapp-icon.svg'
+import Image from 'next/image'
+import { Button } from '../ui/button'
+import { Contact } from './contact'
+import { Footer } from './footer'
+import { FrequentlyQuestions } from './frequently-questions'
+import { MainContent } from './main-content'
+import { Services } from './services'
+import { Testimonials } from './testimonials'
 
 export function App() {
   return (
-    <div className="h-full w-full bg-slate-50">
+    <div className="h-full w-full bg-white">
       <Header />
       <Hero />
 
@@ -21,7 +22,7 @@ export function App() {
       <MainContent />
       <Testimonials />
       <FrequentlyQuestions />
-      {/* <Contact /> */}
+      <Contact />
       <Footer />
 
       <a
@@ -37,5 +38,5 @@ export function App() {
         </Button>
       </a>
     </div>
-  );
+  )
 }

@@ -4,15 +4,26 @@ import { CardBody, CardContainer, CardItem } from '../ui/3d-card';
 
 export function Services() {
   return (
-    <section id="services" className="relative min-h-screen">
-      <div className="z-50 justify-center bg-slate-50">
+    <section
+      id="services"
+      className="relative mx-auto min-h-screen max-w-[1026px] p-8"
+    >
+      <div className="mb-4 flex flex-col">
+        <h3 className="text-base font-semibold uppercase text-brand/90">
+          Serviços
+        </h3>
+        <h2 className="text-4xl font-bold text-slate-800">
+          O que podemos fazer por você?
+        </h2>
+      </div>
+      <div className="z-50 justify-center bg-white">
         <div className="flex h-full w-full flex-col items-center">
-          <div className="grid max-w-[1026px] justify-center gap-4 p-8 sm:grid-cols-auto-sm md:grid-cols-auto-md lg:grid-cols-auto">
+          <div className="grid justify-center gap-4 sm:grid-cols-auto-sm md:grid-cols-auto-md lg:grid-cols-auto">
             {services.map(
               ({ id, icon, title, description, label, subDescription }) => {
                 return (
                   <CardContainer key={id} className="h-full">
-                    <CardBody className="flex h-full w-full flex-1 flex-col items-start gap-2 rounded-2xl bg-white p-6 shadow">
+                    <CardBody className="flex h-full w-full flex-1 flex-col items-start gap-2 rounded-2xl border bg-white p-6">
                       <CardItem
                         className="flex h-[54px] w-[54px] items-center justify-center rounded-full bg-slate-100"
                         as="span"

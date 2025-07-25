@@ -21,7 +21,7 @@ export default function RootLayout({
   children: React.ReactNode;
 }>) {
   return (
-    <html lang="pt-br" className="overflow-x-hidden bg-slate-50">
+    <html lang="pt-br" className="overflow-x-hidden bg-white">
       <body className={`${interSans.className} h-full antialiased`}>
         {children}
       </body>

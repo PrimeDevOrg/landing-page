@@ -2,6 +2,7 @@
 @tailwind components;
 @tailwind utilities;
 
+
 @media (prefers-color-scheme: light) {
   :root {
     --background: #0a0a0a;
@@ -77,5 +78,113 @@ body, html {
   }
   body {
     @apply bg-background text-foreground;
+  }
+}
+
+/* Vidstack Video Player Customization */
+@layer components {
+  .video-container {
+    @apply relative w-full;
+  }
+
+  /* Estilização personalizada do player */
+  .video-container media-player {
+    @apply w-full h-auto;
+    aspect-ratio: 9/16; /* Força aspect ratio para vídeos verticais */
+    max-height: 600px; /* Limita altura máxima */
+  }
+
+  /* Container de controles personalizado */
+  .vds-controls {
+    @apply absolute inset-0 flex items-center justify-center opacity-0 transition-opacity duration-300;
+    background: linear-gradient(
+      to bottom,
+      transparent 0%,
+      rgba(0, 0, 0, 0.3) 50%,
+      rgba(0, 0, 0, 0.7) 100%
+    );
+  }
+
+  .video-container:hover .vds-controls,
+  .video-container:focus-within .vds-controls,
+  [data-paused="true"] .vds-controls {
+    @apply opacity-100;
+  }
+
+  /* Ocultar controles durante reprodução (exceto no hover) */
+  [data-paused="false"]:not(:hover):not(:focus-within) .vds-controls {
+    @apply opacity-0;
+  }
+
+  /* Botão de play/pause personalizado */
+  .custom-play-button {
+    @apply relative p-4 rounded-full bg-white/20 backdrop-blur-sm border border-white/30 transition-all duration-300 hover:bg-white/30 hover:scale-110;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+  }
+
+  .custom-play-button:focus {
+    @apply outline-none ring-2 ring-white/50;
+  }
+
+  /* Ícones do play/pause */
+  .vds-play-icon,
+  .vds-pause-icon {
+    @apply w-8 h-8 text-white transition-all duration-200;
+    filter: drop-shadow(0 2px 4px rgba(0, 0, 0, 0.3));
+  }
+
+  /* Controle de visibilidade dos ícones baseado no estado do player */
+  .custom-play-button .vds-pause-icon {
+    @apply hidden;
+  }
+
+  .custom-play-button .vds-play-icon {
+    @apply block;
+  }
+
+  /* Quando está tocando, mostrar pause */
+  [data-paused="false"] .custom-play-button .vds-play-icon {
+    @apply hidden;
+  }
+
+  [data-paused="false"] .custom-play-button .vds-pause-icon {
+    @apply block;
+  }
+
+  /* Quando está pausado, mostrar play */
+  [data-paused="true"] .custom-play-button .vds-pause-icon {
+    @apply hidden;
+  }
+
+  [data-paused="true"] .custom-play-button .vds-play-icon {
+    @apply block;
+  }
+
+  /* Responsivo - ajustar para telas menores */
+  @media (max-width: 768px) {
+    .video-container media-player {
+      max-height: 400px;
+    }
+    
+    .custom-play-button {
+      @apply p-3;
+    }
+    
+    .vds-play-icon,
+    .vds-pause-icon {
+      @apply w-6 h-6;
+    }
+  }
+
+  /* Efeito de hover para o container do vídeo */
+  .video-container::before {
+    content: '';
+    @apply absolute inset-0 z-10 rounded-lg transition-all duration-300 pointer-events-none;
+    background: linear-gradient(45deg, transparent, rgba(255, 255, 255, 0.1));
+    opacity: 0;
+  }
+
+  .video-container:hover::before {
+    opacity: 1;
   }
 }
