@@ -1,5 +1,5 @@
-import Image from 'next/image';
-import { BackgroundBeams } from '../ui/background-beams';
+import Image from 'next/image'
+import { BackgroundBeams } from '../ui/background-beams'
 
 export function Footer() {
   return (
@@ -39,7 +39,7 @@ export function Footer() {
               className="underline"
               rel="noreferrer"
             >
-              primedev@gmail.com
+              contato@primedev.dev
             </a>
           </p>
           <p>
@@ -56,16 +56,16 @@ export function Footer() {
           <p>
             Instagram:{' '}
             <a
-              href="https://www.instagram.com/primedev.oficial/"
+              href="https://www.instagram.com/primedev.technologies/"
               target="_blank"
               className="underline"
               rel="noreferrer"
             >
-              @primedev.oficial
+              @primedev.technologies
             </a>
           </p>
         </div>
       </footer>
     </div>
-  );
+  )
 }
