@@ -70,7 +70,6 @@ export function Contact() {
     } catch (error) {
       setSubmitStatus('error')
 
-      // Volta ao estado normal após 3 segundos
       setTimeout(() => {
         setSubmitStatus('idle')
       }, 3000)
