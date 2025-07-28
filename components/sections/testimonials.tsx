@@ -48,8 +48,8 @@ export function Testimonials() {
       <Carousel>
         <CarouselContent>
           {testimonials.map((testimonial) => (
-            <CarouselItem key={testimonial.id} className="basis-1/2">
-              <div className="mx-2 flex gap-4 rounded-xl border bg-white p-6">
+            <CarouselItem key={testimonial.id} className="lg:basis-1/2">
+              <div className="mx-2 flex flex-col gap-4 rounded-xl border bg-white p-6 md:flex-row lg:flex-row">
                 <div className="video-container w-[180px] flex-shrink-0">
                   <MediaPlayer
                     title={testimonial.title}
@@ -70,6 +70,7 @@ export function Testimonials() {
                     </Controls.Root>
                   </MediaPlayer>
                 </div>
+
                 <div className="flex flex-col">
                   <h3 className="text-xl font-bold text-[#2E4140]">
                     {testimonial.title}
