@@ -70,7 +70,6 @@ export function Contact() {
     } catch (error) {
       setSubmitStatus('error')
 
-      // Volta ao estado normal após 3 segundos
       setTimeout(() => {
         setSubmitStatus('idle')
       }, 3000)
@@ -82,7 +81,7 @@ export function Contact() {
       id="contact"
       className="m-auto my-8 flex max-w-[1026px] flex-col p-5 px-8"
     >
-      <h3 className="text-lg uppercase text-brand">CONTATO</h3>
+      <h3 className="text-lg text-brand">CONTATO</h3>
       <h1 className="text-4xl font-bold text-slate-800">
         Entre em contato com nossa equipe e solicite um orçamento
       </h1>
@@ -109,7 +108,6 @@ export function Contact() {
               )}
             </div>
 
-            {/* Email */}
             <div className="flex flex-col gap-2">
               <label htmlFor="mail" className="text-slate-700">
                 Email <span className="text-red-500">*</span>
