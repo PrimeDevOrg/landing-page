@@ -90,7 +90,8 @@ export function Contact() {
           onSubmit={handleSubmit(handleSendMessage)}
           className="flex w-full flex-col gap-4"
         >
-          <div className="grid grid-cols-1 gap-4 md:grid-cols-2">
+          <div className="flex grid-cols-1 flex-col gap-4 md:grid md:flex-none md:grid-cols-2">
+            {/* Nome */}
             <div className="flex flex-col gap-2">
               <label htmlFor="name" className="text-slate-700">
                 Nome <span className="text-red-500">*</span>
