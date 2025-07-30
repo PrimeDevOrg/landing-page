@@ -1,12 +1,12 @@
-import { services } from '@/data/services';
-import Image from 'next/image';
-import { CardBody, CardContainer, CardItem } from '../ui/3d-card';
+import { services } from '@/data/services'
+import Image from 'next/image'
+import { CardBody, CardContainer, CardItem } from '../ui/3d-card'
 
 export function Services() {
   return (
     <section
       id="services"
-      className="relative mx-auto min-h-screen max-w-[1026px] p-8"
+      className="relative mx-auto min-h-screen max-w-[1026px] p-4 md:p-8"
     >
       <div className="mb-4 flex flex-col">
         <h3 className="text-base font-semibold uppercase text-brand/90">
@@ -62,12 +62,12 @@ export function Services() {
                       </CardItem>
                     </CardBody>
                   </CardContainer>
-                );
+                )
               },
             )}
           </div>
         </div>
       </div>
     </section>
-  );
+  )
 }

@@ -3,14 +3,14 @@ import {
   AccordionContent,
   AccordionItem,
   AccordionTrigger,
-} from '../ui/accordion';
-import { Card, CardContent } from '../ui/card';
+} from '../ui/accordion'
+import { Card, CardContent } from '../ui/card'
 
 export function FrequentlyQuestions() {
   return (
     <section
       id="faq"
-      className="mx-auto my-5 flex max-w-[1026px] flex-col gap-6 p-5 px-8"
+      className="mx-auto my-5 flex max-w-[1026px] flex-col gap-6 p-5 px-4 md:px-8"
     >
       <div className="flex flex-col gap-1">
         <h3 className="text-lg text-brand">FAQ</h3>
@@ -102,5 +102,5 @@ export function FrequentlyQuestions() {
         </CardContent>
       </Card>
     </section>
-  );
+  )
 }

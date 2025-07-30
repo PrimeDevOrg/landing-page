@@ -79,13 +79,13 @@ export function Contact() {
   return (
     <section
       id="contact"
-      className="m-auto my-8 flex max-w-[1026px] flex-col p-5 px-8"
+      className="m-auto my-8 flex max-w-[1026px] flex-col p-5 px-4 md:px-8"
     >
       <h3 className="text-lg text-brand">CONTATO</h3>
       <h1 className="text-4xl font-bold text-slate-800">
         Entre em contato com nossa equipe e solicite um orçamento
       </h1>
-      <div className="m-auto mt-6 flex w-full rounded-lg border bg-white p-6">
+      <div className="m-auto mt-6 flex w-full rounded-lg border bg-white p-4 md:p-6">
         <form
           onSubmit={handleSubmit(handleSendMessage)}
           className="flex w-full flex-col gap-4"

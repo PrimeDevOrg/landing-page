@@ -13,7 +13,7 @@ export function MainContent() {
         buttonLabel="Entrar em contato"
       /> */}
 
-      <main id="about" className="mt-14 max-w-[1026px] p-5 px-8">
+      <main id="about" className="mt-14 max-w-[1026px] p-5 px-4 md:px-8">
         <h3 className="text-base font-semibold text-brand/90">SOBRE NOS</h3>
         <h1 className="text-4xl font-bold text-[#2E4140]">
           Por que Escolher a PrimeDev?
