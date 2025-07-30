@@ -39,7 +39,7 @@ export function Testimonials() {
   return (
     <section
       id="testimonials"
-      className="m-auto flex max-w-[1026px] flex-col p-5 px-8"
+      className="m-auto flex max-w-[1026px] flex-col p-5 px-4 md:px-8"
     >
       <h3 className="text-lg font-normal text-brand">DEPOIMENTOS</h3>
       <h1 className="mb-8 text-4xl font-bold text-[#2E4140]">
@@ -49,7 +49,7 @@ export function Testimonials() {
         <CarouselContent>
           {testimonials.map((testimonial) => (
             <CarouselItem key={testimonial.id} className="lg:basis-1/2">
-              <div className="mx-2 flex flex-col gap-4 rounded-xl border bg-white p-6 md:flex-row lg:flex-row">
+              <div className="mx-2 flex flex-col gap-3 rounded-xl border bg-white p-4 md:flex-row md:gap-4 md:p-6 lg:flex-row">
                 <div className="video-container w-[180px] flex-shrink-0">
                   <MediaPlayer
                     title={testimonial.title}
