@@ -17,7 +17,7 @@ import {
   Navbar,
   NavbarButton,
   NavBody,
-  NavItems
+  NavItems,
 } from './ui/resizable-navbar'
 
 export function Header() {
